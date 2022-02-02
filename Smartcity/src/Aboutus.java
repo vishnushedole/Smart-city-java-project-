@@ -5,6 +5,10 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 
 public class Aboutus {
 
@@ -18,8 +22,18 @@ public class Aboutus {
 		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\vaishnavi\\Downloads\\aboutus.jpg"));
-		lblNewLabel.setBounds(0, 0, 776, 237);
+		lblNewLabel.setBounds(-12, 45, 776, 237);
 		frame.getContentPane().add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("BACK");
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnNewButton.setBounds(20, 10, 106, 33);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FirstPage f= new FirstPage();
+			}
+		});
+		frame.getContentPane().add(btnNewButton);
 		
 		JLabel lblNewLabel_1 = new JLabel("<html><p>The key features of this Smart City web-based software are:</p>"
 				+ "<p>                                                                                       </p>"
@@ -32,9 +46,8 @@ public class Aboutus {
 				+ "<p>The use of internet is rapidly growing in all cities around the globe. Nowadays, people prefer searching in internet to enquiring the locals of the city. The smart city web pages can be browsed from anywhere using internet service and all the details of the city can be accessed. One can see all the necessary information about city through this online application.</p></html>");
 		lblNewLabel_1.setVerticalAlignment(SwingConstants.TOP);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		lblNewLabel_1.setBounds(10, 247, 766, 506);
+		lblNewLabel_1.setBounds(20, 308, 766, 506);
 		frame.getContentPane().add(lblNewLabel_1);
 		frame.setVisible(true);
 	}
-
 }
